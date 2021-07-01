@@ -107,25 +107,16 @@ namespace HW_basic_func
             {
                 for (int j = 0; j < mat.GetLength(1); j++)
                 {
-                    exist = mat[i, j] == num;
-                    if (exist)
+                    if (mat[i, j] == num)
                     {
-                        break;
+                        Console.WriteLine("Exist!");
+                        return;
                     }
                 }
-                if (exist)
-                {
-                    break;
-                }
+
             }
-            if (exist)
-            {
-                Console.WriteLine("Exist!");
-            }
-            else
-            {
-                Console.WriteLine("Missing!");
-            }
+            Console.WriteLine("Missing!");
+            return;
         }
 
         private static int[] SortArray(int[] arr)
